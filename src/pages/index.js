@@ -58,7 +58,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] },
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
+      filter: { frontmatter: { template: { eq: "blog-post" } }}
     ) {
       edges {
         node {
@@ -69,7 +69,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            templateKey
+            template
             date(formatString: "MMMM DD, YYYY")
           }
         }
