@@ -81,6 +81,7 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description}
         image={post.frontmatter.image}
+        category={post.frontmatter.category}
         tags={post.frontmatter.tags}
       />
     </Layout>
