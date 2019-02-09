@@ -63,8 +63,8 @@ IndexPage.propTypes = {
   })
 };
 
-export const QUERY_INDEX = graphql`
-  query QUERY_INDEX {
+export const QUERY_POST_LISTING = graphql`
+  query QUERY_POST_LISTING {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { template: { eq: "blog-post" } } }
